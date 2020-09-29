@@ -31,58 +31,32 @@ main {
   align-items: center;
 }
 
-.search-form {
+.search-container {
+  width: 40%;
   margin: 1em auto;
+  background-color: #fff;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;  
-  width: 350px;
-  height: 40px;
-  
+  overflow: hidden;
 }
-
-.search-form form {
-  /* position: relative;
-  top: 50%;
-  left: 50%; */
- 
-  
-  display: flex;
-  align-items: center;
-}
-.search-form:hover {
+.search-container:hover {
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15); 
 }
-.search-form:focus {
-  /* height: 200px; */
-  border: 1px solid red;
-}
-
-.search-input {
-  /* position: absolute;
-  top: 10px;
-  left: 38px; */
-  font-size: 1.2em;
-  background: none;  
-  width: 195px;
-  height: 20px;
-  border: none;
-  appearance: none;
+.search-container input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  width: 250px;
   outline: none;
-  display: inline;
+  line-height: 25px;
 }
-
-.search-input:focus {
-  /* height: 200px; */
-  border: 1px solid red;
+.search-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0px;
 }
-
 .search-button {
-  /* position: absolute;
-  top: 10px;
-  left: 15px; */
-  /* height: 20px;
-  width: 20px;  */
   border: none;
   background: none;
   outline: none!important;
@@ -91,20 +65,36 @@ main {
 .search-button svg {
   width: 20px;
   height: 20px;
-  padding: 10px;
 }
-
-.micrphone-button { 
+.microphone-button { 
   border: none;
   background: none;
   outline: none!important;
   cursor: pointer;
 }
-.micrphone-button svg {
+.microphone-button svg {
   width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-left: 4em;
+  height: 20px;  
+}
+.suggestions {  
+  border-top: 0px solid red;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.suggestions h4 {
+  border-top: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 5px;
+}
+.suggestions > div {
+  padding: 5px;
+  color: #ccc;
+  border-top: 1px solid #999;
+  cursor: pointer;
+}
+.suggestions > div:hover {
+  background-color: rgb(90, 90, 90);
 }
 
 .buttons {
@@ -125,12 +115,6 @@ main {
   border: 1px solid rgba(128, 128, 128, 0.787);
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.15); 
 }
-
-.results {
-  display: block;
-  z-index: -1;
-}
-
 footer {
   border-top: 1px solid rgb(204, 204, 204);
   font-size: 0.7em;
