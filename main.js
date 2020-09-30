@@ -1,6 +1,7 @@
 const el = document.querySelector('#suggestions');
 const btnDiv = document.querySelector('.buttons');
 const langDiv = document.querySelector('.lang');
+const appContainer = document.querySelector('.app-container');
 
 const showSuggestions = () => {
   el.setAttribute('style', 'display: block');
@@ -18,4 +19,8 @@ const hideButtons = () => {
 const showButtons = () => {  
   btnDiv.setAttribute('style', 'display: block');  
   langDiv.setAttribute('style', 'display: block')
+}
+
+const showApps = () => {
+  appContainer.classList.toggle('hidden')
 }

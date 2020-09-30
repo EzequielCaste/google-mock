@@ -18,6 +18,15 @@ header ul {
 header ul li {
   margin-left: 15px;
 }
+header a {
+  color: black;
+  text-decoration: none;
+  
+}
+header a:hover {
+  text-decoration: underline;
+  color: rgba(128, 128, 128, 0.808);
+}
 header img {
   border-radius: 50%;
 }
@@ -136,3 +145,66 @@ footer div li {
   padding: 5px 10px;
   list-style: none; 
 }
+
+
+header i {
+  color: rgba(128, 128, 128, 0.808);
+}
+header i:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.app-container {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15); 
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  width: 250px;
+  height: 80vh;
+  overflow: hidden;
+}
+.app-grid {
+  height: 100%;
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
+}
+.app-grid img {
+  max-width: 40px;  
+}
+.app-grid div:first-of-type img {
+  border-radius: 50%;  
+}
+.app-grid > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0.5em 0.2em;
+}
+.hidden {
+  display: block;
+}
+
+/* width */
+::-webkit-scrollbar { 
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb { 
+  border-radius: 4px;
+  background: rgb(199, 199, 199);
+}
+
