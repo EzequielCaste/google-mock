@@ -155,8 +155,8 @@ header i:hover {
   cursor: pointer;
 }
 
-.app-container {
-  display: none;
+.app-container {  
+  display: block;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -189,7 +189,7 @@ header i:hover {
   margin: 0.5em 0.2em;
 }
 .hidden {
-  display: block;
+  display: none;
 }
 
 /* width */

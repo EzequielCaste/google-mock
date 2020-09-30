@@ -22,5 +22,22 @@ const showButtons = () => {
 }
 
 const showApps = () => {
-  appContainer.classList.toggle('hidden')
+  appContainer.style.display = 'block';
 }
+
+const hideApps = () => {
+  alert("got it!")
+//  if ( !appContainer.classList.contains('hidden') ) {
+//   appContainer.classList.add('hidden')
+//  }
+}
+
+window.addEventListener('mouseup', (event) => {
+  if (event.target.classList.contains('fas') ) {
+    showApps();
+  }
+  // console.log(appContainer != event.target, appContainer != event.target.parentNode);
+  if( !appContainer.contains(event.target.parentNode)) {
+    appContainer.style.display = 'none';
+  } 
+});  
