@@ -1,6 +1,7 @@
 const el = document.querySelector('#suggestions');
 const btnDiv = document.querySelector('.buttons');
 const langDiv = document.querySelector('.lang');
+const appBtn = document.querySelector('#appBtn');
 const appContainer = document.querySelector('.app-container');
 
 const showSuggestions = () => {
@@ -21,23 +22,26 @@ const showButtons = () => {
   langDiv.setAttribute('style', 'display: block')
 }
 
-const showApps = () => {
-  appContainer.style.display = 'block';
+const showApps = () => { 
+  appContainer.classList.remove('hidden');
+}
+const hideApps = () => { 
+  appContainer.classList.add('hidden');
 }
 
-const hideApps = () => {
-  alert("got it!")
-//  if ( !appContainer.classList.contains('hidden') ) {
-//   appContainer.classList.add('hidden')
-//  }
-}
-
-window.addEventListener('mouseup', (event) => {
-  if (event.target.classList.contains('fas') ) {
+appBtn.addEventListener('click', (event) => {
+  if ( appContainer.classList.contains('hidden') ) {
     showApps();
+  } else {
+    hideApps();
   }
-  // console.log(appContainer != event.target, appContainer != event.target.parentNode);
-  if( !appContainer.contains(event.target.parentNode)) {
-    appContainer.style.display = 'none';
+})
+
+window.addEventListener('mouseup', (event) => {  
+  if (event.target.classList.contains('fas') ) {    
+    return;
+  }
+  if( !appContainer.contains(event.target.parentNode)) {    
+    hideApps();
   } 
 });  

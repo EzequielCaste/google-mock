@@ -41,7 +41,7 @@ main {
 }
 
 .search-container {
-  width: 40%;
+  /* width: 40%; */
   margin: 1em auto;
   background-color: #fff;
   border-radius: 20px;
@@ -54,7 +54,7 @@ main {
 .search-container input {
   background: transparent;
   border: 0;
-  color: #fff;
+  
   width: 250px;
   outline: none;
   line-height: 25px;
