@@ -1,15 +1,16 @@
-const el = document.querySelector('#suggestions');
+const suggestBox = document.querySelector('#suggestions');
 const btnDiv = document.querySelector('.buttons');
 const langDiv = document.querySelector('.lang');
 const appBtn = document.querySelector('#appBtn');
 const appContainer = document.querySelector('.app-container');
+const searchInput = document.querySelector('#searchInput');
 
 const showSuggestions = () => {
-  el.setAttribute('style', 'display: block');
+  suggestBox.setAttribute('style', 'display: block');
   hideButtons();
 }
 const hideSuggestions = () => {
-  el.setAttribute('style', 'display: none');
+  suggestBox.setAttribute('style', 'display: none');
   showButtons();
 }
 
@@ -26,7 +27,7 @@ const showApps = () => {
   appContainer.classList.remove('hidden');
 }
 const hideApps = () => { 
-  appContainer.classList.add('hidden');
+  appContainer.classList.add('hidden'); 
 }
 
 appBtn.addEventListener('click', (event) => {
@@ -38,10 +39,18 @@ appBtn.addEventListener('click', (event) => {
 })
 
 window.addEventListener('mouseup', (event) => {  
-  if (event.target.classList.contains('fas') ) {    
+  if (event.target.classList.contains('fas') || event.target.classList.contains('suggestions')) {    
     return;
   }
   if( !appContainer.contains(event.target.parentNode)) {    
+    if(document.activeElement.tagName === 'BODY') {
+      hideSuggestions();
+    }
+    
     hideApps();
   } 
 });  
+
+const changeSearch = (e) => {
+  searchInput.value = e
+}

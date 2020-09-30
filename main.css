@@ -109,7 +109,7 @@ main {
 .buttons {
   margin: 1.2em 0;
 }
-.buttons a {
+.buttons button {
   text-decoration: none;
   color: rgba(128, 128, 128, 0.808);
   padding: 10px;  
@@ -118,7 +118,8 @@ main {
   border: 1px solid rgba(0, 128, 0, 0);
 }
 
-.buttons a:hover {
+.buttons button:hover {
+  cursor: pointer;
   color: black;
   background: rgb(236, 236, 236);
   border: 1px solid rgba(128, 128, 128, 0.787);
